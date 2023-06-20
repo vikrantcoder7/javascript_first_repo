@@ -18,11 +18,22 @@ const newString = gamename.substring(0, 4);
 
 console.log(newString);
 
-const anotherstring = gamename.slice(-2, 5);
+const animal =  ['a', 'b', 'c', 'd'];
 
-console.log(anotherstring);
+console.log(animal.slice(2));
 
+const animalname = "tiger";
 
+console.log(animalname.slice(0,2));
+
+const newStringOne = "  vikrant   ";
+
+console.log(newStringOne);
+console.log(newStringOne.trim());
+
+const url = "https://localhost/host%20change";
+
+console.log(url.replace('%20', '-'));
 
 
 
