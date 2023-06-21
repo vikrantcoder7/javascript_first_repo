@@ -60,13 +60,26 @@ const users = [
 ]
 
 
-console.log(tinderuser);
+// console.log(tinderuser);
 
-console.log(Object.keys(tinderuser));
-console.log(Object.values(tinderuser));
-console.log(Object.entries(tinderuser));
+// console.log(Object.keys(tinderuser));
+// console.log(Object.values(tinderuser));
+// console.log(Object.entries(tinderuser));
 
-console.log(tinderuser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderuser.hasOwnProperty('isLoggedIn'));
 
+// Object de-structure and Json - API
 
+const course = {
+    
+    coursename : "udemy",
+    price: "999",
+    courseInstructor: "angela"
+}
 
+//console.log(courseInstructor);
+
+const {courseInstructor: instructor} = course;
+
+//console.log(courseInstructor);
+console.log(instructor);
