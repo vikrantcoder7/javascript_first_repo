@@ -10,3 +10,22 @@ let mydate = new Date();
 
 let mycustomdate = new Date(2023, 0, 23);
 console.log(mycustomdate.toDateString());
+
+let mycustomdate2 = new Date("2023-01-14");
+console.log(mycustomdate2.toLocaleString());
+
+let mytimestamp = Date.now();
+
+console.log(mytimestamp);
+console.log(mycustomdate2.getTime());
+
+let newDate = new Date();
+console.log(newDate);
+console.log(newDate.getMonth() +1
+);
+console.log(newDate.getDay());
+
+
+newDate.toLocaleString(`default`, {
+        weekday : "long"
+})
