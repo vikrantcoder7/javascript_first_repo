@@ -1,5 +1,6 @@
 let a = 300
 
+
 if(true)
 {
     let a = 10
@@ -25,14 +26,13 @@ function one()
 {
      
        const username = "sam";
-
        function two()
-       { 
-          
+       {         
           const website = "sam.com"
           console.log(username);
        }
-
+       
+       //console.log(username);
        //console.log(website);
 
        two();
@@ -65,9 +65,9 @@ function addone(num) {
 }
 
 //addtwo(5);
-console.log("hoisting's phase " + addtwo(2));   // We can't call addtwo before declaration
+console.log("hoisting's phase " + addtwo(2));        // We can't call addtwo before declaration
 
-const  addtwo =  function (num) {              // HOISTING PHASE
+const  addtwo =  function (num) {                    // HOISTING PHASE
       return num + 2;
 }
 
