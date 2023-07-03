@@ -1,5 +1,7 @@
 let a = 300
 
+let div1 = nextteam1;
+let div2 = nextteam2;
 
 if(true)
 {
@@ -7,8 +9,10 @@ if(true)
     const b= 20
     var c = 30
     console.log("INNER a: ", a);
-     
+    
+    
 }
+
 
 // for (let index = 0; index < array.length; index++) 
 // {
