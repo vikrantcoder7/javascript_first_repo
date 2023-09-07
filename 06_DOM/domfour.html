@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning</title>
+</head>
+<body style="background-color: rgb(111, 109, 109); color: #fff;">
+    <ul class="languages">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+        function addLang( langname ) {
+           const custmli =   document.createElement("li")
+            
+           custmli.innerHTML = `${langname}`;
+           document.querySelector('.languages').
+           appendChild(custmli);
+
+        }
+
+        addLang("C++");
+        addLang("Java");
+
+        function addlangoption(langname){
+
+            const custmli = document.createElement("li");
+            custmli.appendChild(document.createTextNode(langname));
+            document.querySelector( '.languages').appendChild(custmli);
+
+        }
+        addlangoption("Nodejs")
+
+        // EDIT METHOD 1
+        const secondLang = document.querySelector("li:nth-child(2)");
+        
+        const newcustmli = document.createElement("li");
+        newcustmli.textContent = "C" 
+        secondLang.replaceWith(newcustmli);    // previous C++ New C
+
+        // EDIT METHOD 2
+
+        const firstlang = document.querySelector("li:first-child");
+        firstlang.outerHTML = "<li>Typescript</li>"
+
+        // REMOVE
+
+        const lastLang = document.querySelector("li:last-child");
+        lastLang.remove();    
+
+</script>
+</html>

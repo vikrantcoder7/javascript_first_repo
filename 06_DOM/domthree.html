@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: rgb(110, 127, 127);  color : #fff ">
+                
+</body>
+<script>
+
+    const customdiv =  document.createElement("div");
+    console.log(customdiv);
+    customdiv.className = "main";
+    customdiv.id = "myId";
+    customdiv.id = Math.round(Math.random() * 10 + 1);
+    customdiv.setAttribute("title", "generated title");
+    customdiv.style.backgroundColor = "green";
+    customdiv.style.padding = "12px";
+    //customdiv.innerText = "Dom Learning";
+
+    const addtext =  document.createTextNode("dom learning");
+    customdiv.append(addtext);
+
+    document.body.append(customdiv);
+
+
+</script>
+</html> 
