@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event's Third File</title>
+</head>
+<body>
+    <h1 style="text-align: center" class="h1ele"> Events Third </h1>
+    <button id="start"> Start </button>
+    <button id="stop"> Stop </button>
+</body>
+    <script>
+
+           const getstartbtn = document.querySelector("#start");
+           const getstopbtn = document.querySelector("#stop");
+            const sayDate = function(str){ 
+                  console.log(str, Date.now());
+            }
+
+            let clrintr;
+            getstartbtn.addEventListener('click', function(e){
+             
+              clrintr =  setInterval(sayDate,2000,"hi")  
+
+            })
+        
+            getstopbtn.addEventListener('click', function(e){
+                 clearInterval(clrintr);
+            })
+
+           
+           
+
+
+
+
+    </script>
+    
+</html>
