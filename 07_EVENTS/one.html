@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event Basics </title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li> <img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/13428333/pexels-photo-13428333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="photoshop"> </li>
+            <li> <img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt=""> </li>
+            <li> <img width="200px" id="river"
+                    src="https://images.pexels.com/photos/2189700/pexels-photo-2189700.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="photoshop"> </li>
+            <li> <img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/53977/eagle-owl-raptor-falconry-owl-53977.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="photoshop"> </li>
+            <li> <img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/1906157/pexels-photo-1906157.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="photoshop"> </li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+    <script>
+
+        /*  Events(e) Provides following functions 
+       /type , timestamp, defaultPrevented
+       / target, toElement, srcElement, currentTarget
+       / clientX, clientY, screenx, screenY
+       / altKey, ctrlKey, shiftKey, keyCode
+       
+       */
+       
+       /*     
+       const getul = document.getElementById('images');
+       getul.addEventListener('click', function(e){
+           console.log('ul is clicked');
+
+       },false)     
+
+
+       const getowl =  document.getElementById('owl');
+       getowl.addEventListener('click' , function(e){
+            e.stopPropagation();
+            console.log('owl is clicked');
+            
+       }, false)
+
+       const getgoogle = document.getElementById('google');
+
+       getgoogle.addEventListener('click', function(e){
+             e.preventDefault();
+             e.stopPropagation();
+             console.log(`google clicked and the element is ${getgoogle}`);
+       }, false)
+       
+       */
+
+       const getulimages = document.querySelector('#images');
+
+       getulimages.addEventListener('click', function(e){
+           
+            // Removing element in a ul list 
+            console.log(e.target.tagName);
+
+            if(e.target.tagName === 'IMG')
+            {
+                console.log(e.target.id);
+                let removeelement = e.target.parentNode;
+                removeelement.remove();
+            }
+
+           
+
+            //removeelement.parentNode.removeChild(removeelement);
+
+       });
+
+
+
+    </script>
+</html>

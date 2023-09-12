@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h1 style="text-align: center" class="h1ele"> Events In Javascript </h1>
+    <button id="stop"> Stop </button>
+
+
+</body>
+
+ <script>
+      const geth1 = document.querySelector('.h1ele');
+
+      geth1.addEventListener('click', function(e){
+           geth1.style.color = "yellow"
+      })
+
+      //       SETTIMEOUT    ////
+
+      const settimeout =  function(){
+            console.log("settimeout run");
+      }
+
+      setTimeout(settimeout,2000);
+
+      const changeh1 = function(){
+           document.querySelector('.h1ele').innerHTML = "Events in javascript try";
+      }
+
+      const changeMe = setTimeout(changeh1,5000);
+
+      const stoptimeout = document.querySelector('#stop');
+
+      stoptimeout.addEventListener('click', function(e){
+           clearTimeout(changeMe);
+           console.log("STOPPED");    
+      })
+
+
+ </script>
+</html>
