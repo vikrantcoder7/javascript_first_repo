@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Keyboard Press </title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue; ">
+    <div class="project">
+        <div id="insert">
+            <div class="key">Press the key and see the key</div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+
+    const firstpara = document.querySelector('.firstpara');
+    const getp = document.getElementById("insert");
+
+    
+
+
+    window.addEventListener('keydown',  (e) => {
+
+        getp.innerHTML = `<div class="printkey">
+                <table>
+  <tr>
+    <th>Key</th>
+    <th>KeyCode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'space' :e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table>
+                </div>`
+
+    })
+
+</script>
+
+</html>

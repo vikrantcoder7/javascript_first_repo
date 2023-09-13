@@ -13,7 +13,9 @@
    </div> 
 </body>
 
-<script>
+
+<script src="eventbasics.js" ></script>  
+    /*
     const getbody = document.getElementById("whbody");
     const getstartbtn = document.getElementById("start");
     const getstopbtn = document.getElementById("stop");
@@ -32,17 +34,20 @@
     }
 
     getstartbtn.addEventListener('click', function(e){
-        changclrevent =   setInterval(changeclr, 2000)
+        if(!changclrevent){
+            changclrevent =  setInterval(changeclr, 2000)
+        }
+        
 
     })
 
     getstopbtn.addEventListener('click', function(e){
          clearInterval(changclrevent);
-         getbody.style.backgroundColor = "#414141";
+         changclrevent = null;
          console.log("color changer stopped");
 
     })
 
+  */
 
-</script>
 </html>
