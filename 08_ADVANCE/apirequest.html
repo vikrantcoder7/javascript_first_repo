@@ -14,7 +14,7 @@
 <script>
        
        const geth1 = document.getElementById('firstheading');
-
+       let response;
        const url = "https://api.coindesk.com/v1/bpi/currentprice.json";
 
        const xhr = new XMLHttpRequest();
@@ -24,16 +24,22 @@
          console.log(xhr.readyState);
          if(xhr.readyState === 4){
                
-                const response = JSON.parse(this.responseText)
-                
+                response = JSON.parse(this.responseText)
                 console.log(response);
-
                 console.log( response.disclaimer );
-                
+
+                const changeafterfivesec = function(){
+                    geth1.innerHTML = response.chartName + " A Bitcoin Currency"; 
+                }
+
                 geth1.innerHTML = response.disclaimer;
-                 
+
+                setTimeout(changeafterfivesec,5000)
          }
+
        }
+
+      
 
        xhr.send();
 
