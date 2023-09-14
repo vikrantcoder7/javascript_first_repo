@@ -135,18 +135,20 @@ consumePromiseFive()
 
                         // FETCH  METHOD 2
 
+const geth1 = document.getElementById('firstpara');
+
 fetch("https://jsonplaceholder.typicode.com/todos/1")
 .then((response) => {
-
     return response.json();
-    
 })
-.then((data) =>{
-
-      
+.then((data) =>
+{
       console.log(data);
-
+      geth1.innerHTML = data.title;
 })
 .catch((e) =>{
       console.log(e);
 })
+
+
+console.log('check res');
